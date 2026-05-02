@@ -3,6 +3,12 @@
 Backend desarrollado con **Node.js, Express y PostgreSQL**, siguiendo buenas prácticas de arquitectura (routes, controllers, services) y validación de datos con **Joi**.
 
 ---
+🌐 **Demo en vivo:**
+GET:
+
+ https://mi-api-pg.onrender.com/productos
+ 
+---
 
 ## 🧠 Descripción
 
