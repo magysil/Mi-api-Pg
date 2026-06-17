@@ -32,6 +32,9 @@ const limiter = rateLimit({
 });
 app.use(limiter);
 app.use(express.json());
+app.get('/', (req, res) => {
+    res.send('<h1>🚀 ¡Bienvenido a mi API de Productos en Render!</h1><p>Usa la ruta <a href="/productos">/productos</a> para ver los datos.</p>');
+});
 app.use("/productos", productosRoutes);
 // Global error handling middleware
 app.use((err, req, res, next) => {
