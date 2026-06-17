@@ -35,10 +35,10 @@ if (precio <= 0) {
     return rows[0];  
 }
 
-export const eleminarProducto = async (id) => {
-    const {rows} = await pool.query ("DELETE FROM productos WHERE id = $1 RETURNING *",
-        [id]   
-        );
-
-    return rows[0]; 
+export const eliminarProducto = async (id) => {
+    const { rows } = await pool.query(
+        "DELETE FROM productos WHERE id = $1 RETURNING *",
+        [id]
+    );
+    return rows[0];
 }

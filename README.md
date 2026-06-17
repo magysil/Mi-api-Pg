@@ -74,7 +74,11 @@ Crear un archivo `.env` en la raíz del proyecto:
 ```env
 PORT=3000
 
+CORS_ORIGIN=http://localhost:3000,http://mydomain.com
+
 DATABASE_URL=postgresql://USER:PASSWORD@HOST/DATABASE
+
+DB_SSL_REJECT_UNAUTHORIZED=false
 ```
 
 > ⚠️ No subir este archivo al repositorio (`.gitignore`).
