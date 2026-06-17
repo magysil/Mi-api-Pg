@@ -1,10 +1,8 @@
-import { Request, Response, NextFunction } from 'express';
-
 export const validateId = (req, res, next) => {
-  const id = parseInt(req.params.id, 10);
-  if (isNaN(id) || id <= 0) {
-    return res.status(400).json({ error: 'Invalid ID parameter' });
+  const { id } = req.params;
+  if (isNaN(id)) {
+    return res.status(400).json({ error: "El ID debe ser un número válido." });
   }
-  req.params.id = id.toString();
+  
   next();
 };
